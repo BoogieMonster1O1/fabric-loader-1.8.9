@@ -128,7 +128,7 @@ abstract class CustomValueImpl implements CustomValue {
 		}
 	}
 
-	private static final class ObjectImpl extends CustomValueImpl implements CvObject {
+	static final class ObjectImpl extends CustomValueImpl implements CvObject {
 		private final Map<String, CustomValue> entries;
 
 		public ObjectImpl(Map<String, CustomValue> entries) {
@@ -210,7 +210,7 @@ abstract class CustomValueImpl implements CustomValue {
 		}
 	}
 
-	private static final class ArrayImpl extends CustomValueImpl implements CvArray {
+	static final class ArrayImpl extends CustomValueImpl implements CvArray {
 		private final List<CustomValue> entries;
 
 		public ArrayImpl(List<CustomValue> entries) {
@@ -288,7 +288,7 @@ abstract class CustomValueImpl implements CustomValue {
 		}
 	}
 
-	private static final class StringImpl extends CustomValueImpl {
+	static final class StringImpl extends CustomValueImpl {
 		final String value;
 
 		public StringImpl(String value) {
@@ -323,7 +323,7 @@ abstract class CustomValueImpl implements CustomValue {
 		}
 	}
 
-	private static final class NumberImpl extends CustomValueImpl {
+	static final class NumberImpl extends CustomValueImpl {
 		final Number value;
 
 		public NumberImpl(Number value) {
@@ -358,7 +358,7 @@ abstract class CustomValueImpl implements CustomValue {
 		}
 	}
 
-	private static final class BooleanImpl extends CustomValueImpl {
+	static final class BooleanImpl extends CustomValueImpl {
 		final boolean value;
 
 		public BooleanImpl(boolean value) {
@@ -393,7 +393,7 @@ abstract class CustomValueImpl implements CustomValue {
 		}
 	}
 
-	private static final class NullImpl extends CustomValueImpl {
+	static final class NullImpl extends CustomValueImpl {
 		@Override
 		public CvType getType() {
 			return CvType.NULL;
